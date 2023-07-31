@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+
+:root{
+  --main-background-color:#FBFBFA;
+  --main-buttons-color:#0086ff;
+  --main-buttons-color-text:#ffffff;
+  --main-hover:#255aaa;
+
+  --main-text-color:#060606;
+  --main-message-color:#EBEAE5;
+
+  --main-user-text-color:#ffffff;
+  --main-user-message-color:#0086ff;
+
+  --visibility:none;
+  --visibility-chats:none;
+}
+:root:has(#theme:checked){
+  --main-background-color:#27292d;
+  --main-buttons-color:#AA4B41;
+  --main-buttons-color-text:#ffffff;
+  --main-hover:#da0e0e;
+
+  --main-text-color:#8e9b97;
+  --main-message-color:#383b40;
+
+  --main-user-text-color:#ffffff;
+  --main-user-message-color:#AA4B41;
+}
+:root:has(#chats:checked){
+  --visibility:flex;
+}
+:root:has(#chat_settings:checked){
+  --visibility-chats:flex;
+}
+.file_upload_chat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0 0;
+  cursor: pointer;
+}
+.null {
+  display: none;
+}
+
+html {
+  font-size:16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.theme-label{
+  /* color: var(--main-text-color); */
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.App{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--main-background-color);
+    transition: .5s;
+    /* color:white; */
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.281);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
